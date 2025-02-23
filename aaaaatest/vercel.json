@@ -8,6 +8,12 @@
   ],
   "routes": [
     {
+      "src": "/",
+      "headers": {
+        "Cache-Control": "public, max-age=0, must-revalidate"
+      }
+    },
+    {
       "src": "/(.*)\\.(jpg|jpeg|png|gif|mp4)$",
       "headers": {
         "cache-control": "public, max-age=31536000, immutable"
@@ -40,6 +46,17 @@
     {
       "src": "/(.*)",
       "dest": "/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-DNS-Prefetch-Control",
+          "value": "on"
+        }
+      ]
     }
   ]
 } 

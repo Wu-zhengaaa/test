@@ -303,4 +303,49 @@ document.querySelector('.social-icon.wechat').addEventListener('click', () => {
 // 服务咨询按钮点击事件
 document.querySelector('.contact-btn').addEventListener('click', () => {
     weixinModal.style.display = 'flex';
+});
+
+// 延迟加载视频
+function lazyLoadVideos() {
+    document.querySelectorAll('source[data-src]').forEach(source => {
+        source.src = source.dataset.src;
+        source.removeAttribute('data-src');
+        source.parentElement.load();
+    });
+}
+
+// 当用户滚动到视频区域时才加载视频
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            lazyLoadVideos();
+            observer.disconnect();
+        }
+    });
+});
+
+document.querySelectorAll('.highlights-section').forEach(section => {
+    observer.observe(section);
+});
+
+// 图片懒加载
+document.addEventListener("DOMContentLoaded", function() {
+    var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+
+    if ("IntersectionObserver" in window) {
+        let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    let lazyImage = entry.target;
+                    lazyImage.src = lazyImage.dataset.src;
+                    lazyImage.classList.remove("lazy");
+                    lazyImageObserver.unobserve(lazyImage);
+                }
+            });
+        });
+
+        lazyImages.forEach(function(lazyImage) {
+            lazyImageObserver.observe(lazyImage);
+        });
+    }
 }); 

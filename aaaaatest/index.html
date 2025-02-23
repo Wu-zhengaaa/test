@@ -13,9 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
     
     <!-- 引入必要的库 -->
-    <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.137.0/build/three.min.js"></script>
     
     <link rel="stylesheet" href="styles.css?v=20240318">
@@ -74,7 +74,7 @@
                         <div class="swiper-slide highlight-card">
                             <div class="video-container">
                                 <video class="highlight-video" controls preload="none" poster="bj/image1.jpg">
-                                    <source src="jijin/1.mp4" type="video/mp4">
+                                    <source data-src="jijin/1.mp4" type="video/mp4">
                                 </video>
                                 <div class="video-overlay">
                                     <button class="play-btn">
@@ -89,7 +89,7 @@
                         <div class="swiper-slide highlight-card">
                             <div class="video-container">
                                 <video class="highlight-video" controls preload="none" poster="bj/image1.jpg">
-                                    <source src="jijin/2.mp4" type="video/mp4">
+                                    <source data-src="jijin/2.mp4" type="video/mp4">
                                 </video>
                                 <div class="video-overlay">
                                     <button class="play-btn">
@@ -104,7 +104,7 @@
                         <div class="swiper-slide highlight-card">
                             <div class="video-container">
                                 <video class="highlight-video" controls preload="none" poster="bj/image1.jpg">
-                                    <source src="jijin/3.mp4" type="video/mp4">
+                                    <source data-src="jijin/3.mp4" type="video/mp4">
                                 </video>
                                 <div class="video-overlay">
                                     <button class="play-btn">
@@ -152,7 +152,11 @@
                 <div class="stats-gallery">
                     <!-- 添加所有战绩图片 -->
                     <div class="stats-item">
-                        <img src="zhanji/a.jpg?v=20240318" alt="战绩展示" class="stats-image" loading="lazy">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
+                             data-src="zhanji/a.jpg?v=20240318" 
+                             alt="战绩展示" 
+                             class="stats-image lazy" 
+                             loading="lazy">
                         <div class="stats-overlay">
                             <div class="stats-info">
                                 <span class="stats-detail">战绩展示</span>
