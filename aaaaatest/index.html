@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>游戏个人主页</title>
     
-    <!-- 预加载关键资源 -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/gh/Wu-zhengaaa/test@main/bj/image1.jpg" as="image">
-    <link rel="preload" href="https://cdn.jsdelivr.net/gh/Wu-zhengaaa/test@main/styles.css" as="style">
-    <link rel="preload" href="https://cdn.jsdelivr.net/gh/Wu-zhengaaa/test@main/main.js" as="script">
-    
     <!-- DNS 预解析 -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -23,15 +18,15 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.137.0/build/three.min.js"></script>
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wu-zhengaaa/test@main/styles.css">
+    <link rel="stylesheet" href="styles.css?v=20240318">
     <!-- 添加main.js引用 -->
-    <script src="https://cdn.jsdelivr.net/gh/Wu-zhengaaa/test@main/main.js" defer></script>
+    <script src="main.js?v=20240318" defer></script>
 </head>
 <body>
     <!-- 动态背景 -->
     <div class="dynamic-bg">
         <div class="bg-overlay"></div>
-        <div class="bg-image" style="background-image: url('https://cdn.jsdelivr.net/gh/Wu-zhengaaa/test@main/bj/image1.jpg');"></div>
+        <div class="bg-image"></div>
     </div>
     <!-- 粒子背景 -->
     <div id="particles-js"></div>
@@ -78,8 +73,8 @@
                         <!-- 精彩集锦视频 -->
                         <div class="swiper-slide highlight-card">
                             <div class="video-container">
-                                <video class="highlight-video" controls preload="none" poster="https://cdn.jsdelivr.net/gh/Wu-zhengaaa/test@main/bj/image1.jpg">
-                                    <source src="https://cdn.jsdelivr.net/gh/Wu-zhengaaa/test@main/jijin/1.mp4" type="video/mp4">
+                                <video class="highlight-video" controls preload="none" poster="bj/image1.jpg">
+                                    <source src="jijin/1.mp4" type="video/mp4">
                                 </video>
                                 <div class="video-overlay">
                                     <button class="play-btn">
@@ -93,8 +88,8 @@
                         </div>
                         <div class="swiper-slide highlight-card">
                             <div class="video-container">
-                                <video class="highlight-video" controls preload="none" poster="https://cdn.jsdelivr.net/gh/Wu-zhengaaa/test@main/bj/image1.jpg">
-                                    <source src="https://cdn.jsdelivr.net/gh/Wu-zhengaaa/test@main/jijin/2.mp4" type="video/mp4">
+                                <video class="highlight-video" controls preload="none" poster="bj/image1.jpg">
+                                    <source src="jijin/2.mp4" type="video/mp4">
                                 </video>
                                 <div class="video-overlay">
                                     <button class="play-btn">
@@ -108,8 +103,8 @@
                         </div>
                         <div class="swiper-slide highlight-card">
                             <div class="video-container">
-                                <video class="highlight-video" controls preload="none" poster="https://cdn.jsdelivr.net/gh/Wu-zhengaaa/test@main/bj/image1.jpg">
-                                    <source src="https://cdn.jsdelivr.net/gh/Wu-zhengaaa/test@main/jijin/3.mp4" type="video/mp4">
+                                <video class="highlight-video" controls preload="none" poster="bj/image1.jpg">
+                                    <source src="jijin/3.mp4" type="video/mp4">
                                 </video>
                                 <div class="video-overlay">
                                     <button class="play-btn">
@@ -157,7 +152,7 @@
                 <div class="stats-gallery">
                     <!-- 添加所有战绩图片 -->
                     <div class="stats-item">
-                        <img src="https://cdn.jsdelivr.net/gh/Wu-zhengaaa/test@main/zhanji/a.jpg" alt="战绩展示" class="stats-image" loading="lazy">
+                        <img src="zhanji/a.jpg?v=20240318" alt="战绩展示" class="stats-image" loading="lazy">
                         <div class="stats-overlay">
                             <div class="stats-info">
                                 <span class="stats-detail">战绩展示</span>
@@ -165,7 +160,7 @@
                         </div>
                     </div>
                     <div class="stats-item">
-                        <img src="https://cdn.jsdelivr.net/gh/Wu-zhengaaa/test@main/zhanji/b.jpg" alt="战绩展示" class="stats-image" loading="lazy">
+                        <img src="zhanji/b.jpg?v=20240318" alt="战绩展示" class="stats-image" loading="lazy">
                         <div class="stats-overlay">
                             <div class="stats-info">
                                 <span class="stats-detail">战绩展示</span>
@@ -173,7 +168,7 @@
                         </div>
                     </div>
                     <div class="stats-item">
-                        <img src="https://cdn.jsdelivr.net/gh/Wu-zhengaaa/test@main/zhanji/c.jpg" alt="战绩展示" class="stats-image" loading="lazy">
+                        <img src="zhanji/c.jpg?v=20240318" alt="战绩展示" class="stats-image" loading="lazy">
                         <div class="stats-overlay">
                             <div class="stats-info">
                                 <span class="stats-detail">战绩展示</span>
@@ -181,7 +176,7 @@
                         </div>
                     </div>
                     <div class="stats-item">
-                        <img src="https://cdn.jsdelivr.net/gh/Wu-zhengaaa/test@main/zhanji/d.jpg" alt="战绩展示" class="stats-image" loading="lazy">
+                        <img src="zhanji/d.jpg?v=20240318" alt="战绩展示" class="stats-image" loading="lazy">
                         <div class="stats-overlay">
                             <div class="stats-info">
                                 <span class="stats-detail">战绩展示</span>
@@ -189,7 +184,7 @@
                         </div>
                     </div>
                     <div class="stats-item">
-                        <img src="https://cdn.jsdelivr.net/gh/Wu-zhengaaa/test@main/zhanji/e.jpg" alt="战绩展示" class="stats-image" loading="lazy">
+                        <img src="zhanji/e.jpg?v=20240318" alt="战绩展示" class="stats-image" loading="lazy">
                         <div class="stats-overlay">
                             <div class="stats-info">
                                 <span class="stats-detail">战绩展示</span>
@@ -197,7 +192,7 @@
                         </div>
                     </div>
                     <div class="stats-item">
-                        <img src="https://cdn.jsdelivr.net/gh/Wu-zhengaaa/test@main/zhanji/f.jpg" alt="战绩展示" class="stats-image" loading="lazy">
+                        <img src="zhanji/f.jpg?v=20240318" alt="战绩展示" class="stats-image" loading="lazy">
                         <div class="stats-overlay">
                             <div class="stats-info">
                                 <span class="stats-detail">战绩展示</span>
@@ -215,7 +210,7 @@
                 <div class="services-gallery">
                     <!-- 服务价格图片 -->
                     <div class="service-item">
-                        <img src="https://cdn.jsdelivr.net/gh/Wu-zhengaaa/test@main/fuwu/1.jpg" alt="服务价格" class="service-image" loading="lazy">
+                        <img src="fuwu/1.jpg?v=20240318" alt="服务价格" class="service-image" loading="lazy">
                         <div class="service-overlay">
                             <button class="contact-btn">立即咨询</button>
                         </div>
@@ -242,7 +237,7 @@
     <!-- 微信二维码模态窗口 -->
     <div class="image-modal" id="weixinModal">
         <div class="image-modal-content">
-            <img class="modal-image" src="https://cdn.jsdelivr.net/gh/Wu-zhengaaa/test@main/bj/weixin.jpg" alt="微信二维码">
+            <img class="modal-image" src="bj/weixin.jpg?v=20240318" alt="微信二维码">
         </div>
     </div>
 </body>

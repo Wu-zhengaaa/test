@@ -12,6 +12,16 @@
     box-sizing: border-box;
 }
 
+/* 自定义滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 243, 255, 0.3);
+    border-radius: 4px;
+}
+
 body {
     font-family: 'Orbitron', sans-serif;
     background-color: var(--background-color);
@@ -45,6 +55,7 @@ body {
     left: -20px;
     width: calc(100% + 40px);  /* 补偿视差移动 */
     height: calc(100% + 40px);
+    background-image: url('bj/image1.jpg');
     background-size: cover;
     background-position: center;
     filter: brightness(0.6) contrast(1.2);
@@ -93,6 +104,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background: rgba(10, 10, 10, 0.8);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     z-index: 1000;
 }
@@ -589,4 +601,8 @@ body {
 .close-modal:hover {
     transform: scale(1.2);
     text-shadow: 0 0 10px var(--primary-color);
+}
+
+.interactive-element {
+    touch-action: manipulation;
 } 
